@@ -173,7 +173,7 @@ function start(){
   D.platforms.forEach(function(p){h+='<tr><td class="pl">'+esc(p.name)+'<small>'+esc(p.url)+'</small></td><td>'+esc(p.claim)+'</td><td class="n">'+esc(p.price)+'</td><td class="n">'+esc(p.fps)+'</td><td class="n">'+esc(p.dur)+'</td><td>'+esc(p.mark)+'</td><td>'+badge(p.verdict)+'</td></tr>';});
   $("#tbl").innerHTML=h;
   var f=hd(D.L.t2);
-  D.facts.forEach(function(x){f+='<tr><td class="pl">'+esc(x.platform)+'</td><td>'+esc(x.file)+'</td><td class="n">'+esc(x.size)+'</td><td class="n">'+esc(x.fps)+'</td><td class="n">'+esc(x.dur)+'</td><td>'+esc(x.mark)+'</td><td class="n">'+esc(x.id||"—")+'</td><td class="n">'+esc(x.encoder)+'</td></tr>';});
+  D.facts.forEach(function(x){f+='<tr><td class="pl">'+esc(x.platform)+'</td><td>'+esc(x.file)+'</td><td class="n">'+esc(x.size)+'</td><td class="n">'+esc(x.fps)+'</td><td class="n">'+esc(x.dur)+'</td><td>'+esc(x.mark)+'</td><td class="n">'+esc(x.id||"—")+'</td><td class="n">'+esc(x.when||"—")+'</td><td class="n">'+esc(x.encoder)+'</td></tr>';});
   $("#facts").innerHTML=f;
   var b="",k=0;sets=[];
   D.platforms.forEach(function(p){b+='<section class="blk" id="'+esc(p.id)+'"><h2>'+esc(p.name)+" "+badge(p.verdict)+'</h2><p class="ln">'+esc(p.line)+'</p><div class="u">'+esc(p.url)+' · '+esc(p.price)+'</div>';
